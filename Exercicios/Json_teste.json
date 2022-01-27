@@ -1,0 +1,42 @@
+[
+ {
+  "nome": "Bola",
+  "preco": 59.0
+ },
+ {
+  "nome": "Lapis",
+  "preco": 49.0
+ },
+ {
+  "nome": "Caneta",
+  "preco": 19.0
+ },
+ {
+  "nome": "Borracha",
+  "preco": 58.0
+ },
+ {
+  "nome": "Caderno",
+  "preco": 59.0
+ },
+ {
+  "nome": "Tenis",
+  "preco": 119.0
+ },
+ {
+  "nome": "Mouse",
+  "preco": 54.0
+ },
+ {
+  "nome": "Tinta",
+  "preco": 73.0
+ },
+ {
+  "nome": "Pincel",
+  "preco": 91.0
+ },
+ {
+  "nome": "canivete",
+  "preco": 19.0
+ }
+]
