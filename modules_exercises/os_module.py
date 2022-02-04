@@ -1,6 +1,6 @@
 import os
 
-caminho = r"C:\Users\kaique.silva\Desktop\python_exercises"
+caminho = os.getcwd()
 total_py = total = 0
 for raiz, diretorio, arquivos in os.walk(caminho):
     total += 1
