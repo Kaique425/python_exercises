@@ -11,7 +11,7 @@ class Network:
         self.choice = choice
 
     def networkscanner(self):
-        network = "192.168.4.1/24"
+        network = "127.0.1.1/24"
         nm = nmap.PortScanner()
         nm.scan(hosts=network, arguments="-sn")
         host_list = [(x, nm[x]["status"]["state"]) for x in nm.all_hosts()]
