@@ -1,4 +1,6 @@
+from http import client, server
 from socket import AF_INET, SOCK_STREAM, socket
+from threading import Thread
 from time import sleep
 
 HOST = ""
@@ -6,30 +8,30 @@ HOST = ""
 
 PORT = 8050
 
-socket_obj = socket(AF_INET, SOCK_STREAM)
+server = socket(AF_INET, SOCK_STREAM)
 
-socket_obj.bind((HOST, PORT))
+server.bind((HOST, PORT))
 
 print("Socket bind success!")
 
-socket_obj.listen(2)
+server.listen(2)
 
 print("Server is now listen!")
 
-while True:
 
-    connection, ip_address = socket_obj.accept()
-    print(connection)
+while True:
+    client, ip_address = server.accept()
     print(f"Server connected by: {ip_address}")
 
     while True:
 
-        data = connection.recv(1024)
+        data = client.recv(1024)
 
         if not data:
             break
-
-        connection.send(b"msg: " + data)
+        input_msg = f"key pressed {data.decode()}"
+        client.send(input_msg.encode("utf-8"))
 
     sleep(1)
-    connection.close()
+    server.close()
+    client.close()
