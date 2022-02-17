@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 from re import T
+=======
+from http import client
+>>>>>>> 53199833751f5809a2ebeb64f3541f7ff84259c3
 from socket import AF_INET, SOCK_STREAM, socket
 from threading import Thread
 
@@ -11,6 +15,7 @@ client = socket(AF_INET, SOCK_STREAM)
 
 client.connect((HOST, PORT))
 
+<<<<<<< HEAD
 
 def handle_messages():
     while True:
@@ -46,3 +51,11 @@ def start():
 
 
 start()
+=======
+while True:
+    msg = input("msg=")
+    client.send(msg.encode("utf-8"))
+
+    data = client.recv(1024)
+    print(f"Server disse: {data.decode()}")
+>>>>>>> 53199833751f5809a2ebeb64f3541f7ff84259c3
